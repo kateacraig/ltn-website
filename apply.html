@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Apply for Services - Love Thy Neighbor</title>
+  </head>
+  <body>
+
+    <!-- ============================================================
+         HEADER
+         ============================================================ -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.jpeg" alt="Love Thy Neighbor Logo" />
+          </a>
+          <span class="logo-text">
+            <a href="index.html">Love Thy Neighbor</a>
+          </span>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="food-pantry.html">Food Pantry</a></li>
+          <li><a href="thrift-store.html">Thrift Store</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a
+              href="https://www.zeffy.com/en-US/donation-form/love-thy-neighbor-giving-hope-to-our-community"
+              class="donate-btn"
+              target="_blank"
+              >Donate Now</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ============================================================
+         PAGE HEADER
+         ============================================================ -->
+    <div class="page-header">
+      <h1>Apply for Services</h1>
+      <p>
+        We're here to help you focus on what matters most — family and healing.
+        Fill out the form below and our team will be in touch within 2–3
+        business days.
+      </p>
+    </div>
+
+    <!-- ============================================================
+         ELIGIBILITY & REQUIREMENTS STRIP
+         ============================================================ -->
+    <section class="apply-eligibility">
+      <div class="apply-eligibility-inner">
+
+        <div class="eligibility-panel">
+          <h3>🏠 Who We Serve</h3>
+          <ul>
+            <li>Cancer patients undergoing treatment (all types)</li>
+            <li>Disabled veterans</li>
+            <li>Single parents with terminally ill or handicapped children</li>
+            <li>Elderly individuals who cannot clean for themselves</li>
+            <li>Families with seriously ill household members</li>
+          </ul>
+        </div>
+
+        <div class="requirement-panel">
+          <h3>📋 What You'll Need</h3>
+          <ul>
+            <li>A doctor's letter confirming your diagnosis or condition</li>
+            <li>Proof of residency in the St. Petersburg / Tampa Bay area</li>
+            <li>A valid photo ID</li>
+            <li>Your honest story — tell us what you're going through</li>
+          </ul>
+          <p class="req-note">
+            Applications are reviewed based on mission alignment and available
+            resources. Not all applications can be accepted due to capacity.
+            We'll do our best to help or connect you with other resources.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         APPLICATION FORM
+         ============================================================ -->
+    <section class="apply-section">
+      <div class="apply-form-wrap">
+
+        <h2>Your Application</h2>
+        <p class="apply-form-subtitle">
+          All fields marked <span style="color:#c93030;font-weight:700;">*</span>
+          are required. Your information is kept private and never shared.
+        </p>
+
+        <!-- Success message (hidden until form submits) -->
+        <div class="apply-success-msg" id="applySuccess">
+          <span class="success-icon">💌</span>
+          <h3>Application Received!</h3>
+          <p>
+            Thank you for reaching out. Our team reviews every application with
+            care and will contact you within <strong>2–3 business days</strong>.
+          </p>
+          <p>
+            If you have an urgent need, please call us directly at
+            <strong>(727) 384-6243</strong> (Monday–Friday, 9am–5pm).
+          </p>
+          <a href="index.html" class="btn" style="margin-top:1.5rem;">Return to Home</a>
+        </div>
+
+        <form id="applyForm" novalidate>
+
+          <!-- — — PERSONAL INFORMATION — — -->
+          <p class="form-section-label">Personal Information</p>
+
+          <div class="apply-form-row">
+            <div class="apply-field-group">
+              <label for="applyFirstName">
+                First Name <span class="required-star">*</span>
+              </label>
+              <input
+                type="text"
+                id="applyFirstName"
+                name="firstName"
+                placeholder="Jane"
+                autocomplete="given-name"
+              />
+              <span class="field-error-msg" id="applyFirstNameError"></span>
+            </div>
+
+            <div class="apply-field-group">
+              <label for="applyLastName">
+                Last Name <span class="required-star">*</span>
+              </label>
+              <input
+                type="text"
+                id="applyLastName"
+                name="lastName"
+                placeholder="Smith"
+                autocomplete="family-name"
+              />
+              <span class="field-error-msg" id="applyLastNameError"></span>
+            </div>
+          </div>
+
+          <div class="apply-form-row">
+            <div class="apply-field-group">
+              <label for="applyPhone">
+                Phone Number <span class="required-star">*</span>
+              </label>
+              <input
+                type="tel"
+                id="applyPhone"
+                name="phone"
+                placeholder="(727) 555-0100"
+                autocomplete="tel"
+              />
+              <span class="field-error-msg" id="applyPhoneError"></span>
+            </div>
+
+            <div class="apply-field-group">
+              <label for="applyEmail">
+                Email Address <span class="required-star">*</span>
+              </label>
+              <input
+                type="email"
+                id="applyEmail"
+                name="email"
+                placeholder="jane@email.com"
+                autocomplete="email"
+              />
+              <span class="field-error-msg" id="applyEmailError"></span>
+            </div>
+          </div>
+
+          <!-- — — HOME ADDRESS — — -->
+          <p class="form-section-label" style="margin-top:2rem;">Home Address</p>
+
+          <div class="apply-field-group">
+            <label for="applyStreet">
+              Street Address <span class="required-star">*</span>
+            </label>
+            <input
+              type="text"
+              id="applyStreet"
+              name="street"
+              placeholder="123 Main Street, Apt 4B"
+              autocomplete="street-address"
+            />
+            <span class="field-error-msg" id="applyStreetError"></span>
+          </div>
+
+          <div class="address-subgrid">
+            <div class="apply-field-group">
+              <label for="applyCity">
+                City <span class="required-star">*</span>
+              </label>
+              <input
+                type="text"
+                id="applyCity"
+                name="city"
+                placeholder="St. Petersburg"
+                autocomplete="address-level2"
+              />
+              <span class="field-error-msg" id="applyCityError"></span>
+            </div>
+
+            <div class="apply-field-group">
+              <label for="applyState">
+                State <span class="required-star">*</span>
+              </label>
+              <input
+                type="text"
+                id="applyState"
+                name="state"
+                placeholder="FL"
+                maxlength="2"
+                autocomplete="address-level1"
+              />
+              <span class="field-error-msg" id="applyStateError"></span>
+            </div>
+
+            <div class="apply-field-group">
+              <label for="applyZip">
+                ZIP Code <span class="required-star">*</span>
+              </label>
+              <input
+                type="text"
+                id="applyZip"
+                name="zip"
+                placeholder="33710"
+                maxlength="10"
+                autocomplete="postal-code"
+              />
+              <span class="field-error-msg" id="applyZipError"></span>
+            </div>
+          </div>
+
+          <!-- — — SERVICE DETAILS — — -->
+          <p class="form-section-label" style="margin-top:2rem;">Service Details</p>
+
+          <div class="apply-field-group">
+            <label for="applyService">
+              Which service are you applying for?
+              <span class="required-star">*</span>
+            </label>
+            <select id="applyService" name="service">
+              <option value="">— Please select —</option>
+              <option value="cleaning">Free Cleaning Services</option>
+              <option value="pantry">Food Pantry Access</option>
+              <option value="both">Both Cleaning & Food Pantry</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+            <span class="field-error-msg" id="applyServiceError"></span>
+          </div>
+
+          <!-- — — YOUR STORY — — -->
+          <p class="form-section-label" style="margin-top:2rem;">Your Story</p>
+
+          <div class="apply-field-group">
+            <label for="applyStory">
+              Please tell us about your situation and why you are reaching
+              out to Love Thy Neighbor <span class="required-star">*</span>
+            </label>
+            <textarea
+              id="applyStory"
+              name="story"
+              placeholder="Share as much or as little as you're comfortable with. Tell us about your diagnosis or condition, your family situation, and how our services could help you right now…"
+            ></textarea>
+            <div class="char-counter" id="storyCharCount">0 / 2000 characters</div>
+            <span class="field-error-msg" id="applyStoryError"></span>
+          </div>
+
+          <!-- Privacy note -->
+          <div class="apply-privacy-note">
+            <span class="lock">🔒</span>
+            <span>
+              Your information is kept strictly confidential and used only to
+              review your application. We will never sell or share your personal
+              details with third parties.
+            </span>
+          </div>
+
+          <button type="submit" class="apply-submit-btn" id="applySubmitBtn">
+            Submit My Application
+          </button>
+
+          <p style="text-align:center; margin-top:1.2rem; color:#777; font-size:0.9rem;">
+            Prefer to apply by phone? Call
+            <strong><a href="tel:7273846243" style="color:#c93030;">(727) 384-6243</a></strong>
+            Monday–Friday, 9am–5pm.<br />In partnership with
+            <strong>Cleaning for a Reason</strong>.
+          </p>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHAT HAPPENS NEXT
+         ============================================================ -->
+    <section class="apply-next-steps">
+      <div class="container">
+        <h2 class="section-title">What Happens Next</h2>
+        <div class="next-steps-grid">
+
+          <div class="next-step-card">
+            <div class="next-step-number">1</div>
+            <h3>We Review Your Application</h3>
+            <p>
+              Our team personally reviews every submission within 2–3 business
+              days. We read every story.
+            </p>
+          </div>
+
+          <div class="next-step-card">
+            <div class="next-step-number">2</div>
+            <h3>We'll Be in Touch</h3>
+            <p>
+              A team member will contact you by phone or email to confirm
+              details and discuss next steps.
+            </p>
+          </div>
+
+          <div class="next-step-card">
+            <div class="next-step-number">3</div>
+            <h3>We Show Up for You</h3>
+            <p>
+              Once approved, we schedule your first cleaning or connect you
+              with the pantry — at no cost to you.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Love Thy Neighbor</h3>
+          <p>
+            Providing clean and healthy homes, nutritious food, and community
+            support for people in need.
+          </p>
+          <p>Serving St. Petersburg, Florida since 2005</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="about-us.html">About Us</a>
+          <a href="food-pantry.html">Food Pantry</a>
+          <a href="thrift-store.html">Thrift Store</a>
+          <a href="partners.html">Our Partners</a>
+          <a href="apply.html">Apply for Cleaning</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p><strong>General Inquiries:</strong><br />(727) 803-6977</p>
+          <p><strong>Cleaning Services:</strong><br />(727) 384-6243</p>
+          <p><strong>Email:</strong><br />info@lovethyneighborfl.org</p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/p/Love-Thy-Neighbor-Florida-100093370116046/"
+              class="social-icon facebook"
+              target="_blank"
+              rel="noreferrer"
+              >f</a
+            >
+            <a
+              href="https://www.instagram.com/lovethyneighborfl/"
+              class="social-icon camera"
+              target="_blank"
+              rel="noreferrer"
+              >📷</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Locations</h3>
+          <p>
+            <strong>Food Pantry & Thrift Store:</strong><br />7110 5th Avenue
+            North<br />St. Petersburg, FL 33710
+          </p>
+          <p>
+            <strong>Office:</strong><br />3880 5th Avenue<br />St. Petersburg,
+            FL 33710
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Love Thy Neighbor, Inc. All rights reserved. |
+          501(c)(3) Non-Profit Organization
+        </p>
+      </div>
+    </footer>
+
+    <script src="script/main.js"></script>
+  </body>
+</html>

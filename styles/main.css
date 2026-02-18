@@ -839,7 +839,7 @@ footer {
 }
 
 .info-icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .hours-list {
@@ -1616,9 +1616,9 @@ footer {
 
 .map-placeholder iframe {
   border-radius: 10px;
-  width: 100%;
+  width: 350%;
   height: 100%;
-  border: 0;
+  border: 5px solid #d85b7f;
 }
 
 /* ============================================================
@@ -1651,6 +1651,371 @@ footer {
 .donate-method p {
   color: #555;
   margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   APPLY PAGE - ELIGIBILITY BANNER
+   ============================================================ */
+.apply-eligibility {
+  background: linear-gradient(135deg, #ffe4e9 0%, #fff0f5 100%);
+  padding: 4rem 2rem;
+}
+
+.apply-eligibility-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.eligibility-panel {
+  background: white;
+  padding: 2rem 2rem 2rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.eligibility-panel h3 {
+  color: #c93030;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eligibility-panel ul {
+  list-style: none;
+  color: #555;
+}
+
+.eligibility-panel ul li {
+  padding: 0.45rem 0 0.45rem 1.6rem;
+  position: relative;
+  font-size: 0.97rem;
+  line-height: 1.5;
+}
+
+.eligibility-panel ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #c93030;
+  font-weight: 700;
+}
+
+.requirement-panel {
+  background: #fff9e6;
+  border-left: 5px solid #c93030;
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.requirement-panel h3 {
+  color: #c93030;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.requirement-panel ul {
+  list-style: none;
+  color: #555;
+}
+
+.requirement-panel ul li {
+  padding: 0.45rem 0 0.45rem 1.6rem;
+  position: relative;
+  font-size: 0.97rem;
+  line-height: 1.5;
+}
+
+.requirement-panel ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #c93030;
+  font-weight: 700;
+}
+
+.requirement-panel .req-note {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* ============================================================
+   APPLY PAGE - FORM SECTION
+   ============================================================ */
+.apply-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.apply-form-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ffe4e9 0%, #fff0f5 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.apply-form-wrap h2 {
+  font-family: "Pacifico", cursive;
+  color: #d85b7f;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.apply-form-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+/* Field groups */
+.apply-field-group {
+  margin-bottom: 1.5rem;
+}
+
+.apply-field-group label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.97rem;
+}
+
+.apply-field-group label .required-star {
+  color: #c93030;
+  margin-left: 2px;
+}
+
+.apply-field-group input,
+.apply-field-group textarea,
+.apply-field-group select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid #ffd6e4;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+  transition: border-color 0.25s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.apply-field-group input:focus,
+.apply-field-group textarea:focus,
+.apply-field-group select:focus {
+  outline: none;
+  border-color: #d85b7f;
+}
+
+.apply-field-group input.field-error,
+.apply-field-group textarea.field-error,
+.apply-field-group select.field-error {
+  border-color: #c93030;
+}
+
+.apply-field-group .field-error-msg {
+  color: #c93030;
+  font-size: 0.82rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+.apply-field-group .field-error-msg.show {
+  display: block;
+}
+
+/* Two-column row */
+.apply-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Address sub-grid */
+.address-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.address-subgrid .span-full {
+  grid-column: 1 / -1;
+}
+
+/* Story textarea */
+.apply-field-group textarea {
+  min-height: 190px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.char-counter {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.3rem;
+  transition: color 0.2s;
+}
+
+.char-counter.warn {
+  color: #c93030;
+}
+
+/* Privacy/consent note */
+.apply-privacy-note {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.8rem;
+  font-size: 0.88rem;
+  color: #666;
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.apply-privacy-note .lock {
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+/* Submit button */
+.apply-submit-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: #c93030;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.apply-submit-btn:hover {
+  background: #a82828;
+  transform: translateY(-2px);
+}
+
+.apply-submit-btn:disabled {
+  background: #ccc;
+  transform: none;
+  cursor: not-allowed;
+}
+
+/* Section divider label inside form */
+.form-section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d85b7f;
+  border-bottom: 2px solid #ffd6e4;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Success state */
+.apply-success-msg {
+  display: none;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: white;
+  border-radius: 15px;
+}
+
+.apply-success-msg.show {
+  display: block;
+}
+
+.apply-success-msg .success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.apply-success-msg h3 {
+  font-family: "Pacifico", cursive;
+  color: #d85b7f;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.apply-success-msg p {
+  color: #555;
+  font-size: 1rem;
+  max-width: 480px;
+  margin: 0 auto 0.75rem;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   APPLY PAGE - WHAT HAPPENS NEXT
+   ============================================================ */
+.apply-next-steps {
+  padding: 4rem 2rem;
+  background: #fff0f5;
+}
+
+.next-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.next-step-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.next-step-number {
+  width: 52px;
+  height: 52px;
+  background: #c93030;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.next-step-card h3 {
+  color: #d85b7f;
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+
+.next-step-card p {
+  color: #666;
+  font-size: 0.93rem;
+  line-height: 1.6;
 }
 
 /* ============================================================
@@ -1719,6 +2084,21 @@ footer {
 
   .partners-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Apply page */
+  .apply-eligibility-inner {
+    max-width: 100%;
+  }
+
+  .next-steps-grid {
+    max-width: 100%;
   }
 }
 
@@ -1798,6 +2178,33 @@ footer {
   /* News */
   .news-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Apply page */
+  .apply-eligibility-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .apply-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .address-subgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .address-subgrid .span-full {
+    grid-column: 1;
+  }
+
+  .next-steps-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .apply-form-wrap {
+    padding: 2rem;
   }
 }
 
@@ -1904,5 +2311,28 @@ footer {
   /* Partner form */
   .partner-form {
     padding: 1.5rem;
+  }
+
+  /* Apply page */
+  .apply-form-wrap {
+    padding: 1.5rem;
+  }
+
+  .apply-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .address-subgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .address-subgrid .span-full {
+    grid-column: 1;
+  }
+
+  .next-steps-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
   }
 }
