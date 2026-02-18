@@ -1,0 +1,1908 @@
+/* ============================================================
+   LOVE THY NEIGHBOR - MASTER STYLESHEET
+   Breakpoints: 1024px (tablet), 768px (small tablet), 468px (mobile)
+   ============================================================ */
+
+/* ============================================================
+   GLOBAL RESET & BASE
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   HEADER & NAVIGATION
+   ============================================================ */
+header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo-text {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+}
+
+.logo-text a {
+  color: #d85b7f;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d85b7f;
+}
+
+.donate-btn {
+  background: #c93030;
+  color: white !important;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.donate-btn:hover {
+  background: #a82828;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   HAMBURGER MENU
+   ============================================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #c93030;
+  margin: 3px 0;
+  transition: all 0.3s;
+  border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================================
+   PAGE HEADER (shared banner at top of inner pages)
+   ============================================================ */
+.page-header {
+  background: linear-gradient(135deg, #fff0f5 0%, #ffe4e9 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  color: #d85b7f;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================================
+   SHARED SECTION TITLES
+   ============================================================ */
+.section-title {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  color: #d85b7f;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* ============================================================
+   SHARED BUTTON
+   ============================================================ */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #c93030;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  background: #a82828;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: #333;
+  color: white;
+  padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: #d85b7f;
+  margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+  color: #d85b7f;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #555;
+  color: #999;
+}
+
+/* ============================================================
+   SOCIAL LINKS
+   ============================================================ */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: #d85b7f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.social-icon.facebook {
+  font-size: 26px;
+  padding-left: 15px;
+  font-weight: 600;
+}
+
+.social-icon.camera {
+  font-size: 22px;
+  padding-left: 9.5px;
+  padding-top: 1px;
+}
+
+.social-icon:hover {
+  background: #c93030;
+}
+
+/* ============================================================
+   INDEX PAGE - HERO
+   ============================================================ */
+.hero {
+  background: linear-gradient(135deg, #fff0f5 0%, #ffe4e9 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  color: #d85b7f;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  color: #c93030;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  background: #c93030;
+  color: white;
+}
+
+.btn-secondary {
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  background: white;
+  color: #d85b7f;
+  border: 2px solid #d85b7f;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================================
+   INDEX PAGE - SERVICES
+   ============================================================ */
+.services {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: #fff0f5;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(216, 91, 127, 0.2);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  color: #c93030;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.service-card a {
+  color: #d85b7f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ============================================================
+   INDEX PAGE - APPLICATION
+   ============================================================ */
+.application {
+  background: linear-gradient(135deg, #ffe4e9 0%, #fff0f5 100%);
+  padding: 4rem 2rem;
+}
+
+.app-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app-box h2 {
+  font-family: "Pacifico", cursive;
+  color: #d85b7f;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.app-box h3 {
+  color: #c93030;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.eligibility {
+  background: #fff0f5;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.eligibility h4 {
+  color: #c93030;
+  margin-bottom: 1rem;
+}
+
+.eligibility ul {
+  list-style-position: inside;
+  color: #555;
+}
+
+.eligibility li {
+  margin-bottom: 0.5rem;
+}
+
+.form-note {
+  background: #fff9e6;
+  border-left: 4px solid #c93030;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.app-box .btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+/* ============================================================
+   INDEX PAGE - IMPACT STATS
+   ============================================================ */
+.impact {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #c93030;
+}
+
+.stat-label {
+  color: #555;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
+   INDEX PAGE - NEWS
+   ============================================================ */
+.news-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.news {
+  padding: 4rem 2rem;
+  background: #fff0f5;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.news-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.news-card:hover {
+  transform: scale(1.02);
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  background: #d85b7f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+.news-content {
+  padding: 1.5rem;
+}
+
+.news-story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 40px 10px 10px 0;
+}
+
+.news-date {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-card h3 {
+  color: #c93030;
+  margin-bottom: 1rem;
+}
+
+.news-card a {
+  color: #d85b7f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ============================================================
+   ABOUT US PAGE - MISSION
+   ============================================================ */
+.mission {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.mission-box {
+  background: #fff0f5;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-box h2 {
+  font-family: "Pacifico", cursive;
+  color: #c93030;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-box p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ============================================================
+   ABOUT US PAGE - FOUNDER
+   ============================================================ */
+.founder {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.founder-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.founder-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #d85b7f;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 4rem;
+  overflow: hidden;
+}
+
+.founder-image img {
+  width: 330px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.founder-text h2 {
+  font-family: "Pacifico", cursive;
+  color: #d85b7f;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.founder-text h3 {
+  color: #c93030;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.founder-text p {
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.highlight-box {
+  background: #fff9e6;
+  border-left: 4px solid #c93030;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* ============================================================
+   ABOUT US PAGE - TIMELINE
+   ============================================================ */
+.timeline {
+  padding: 4rem 2rem;
+  background: #fff0f5;
+}
+
+.timeline-items {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-items::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #d85b7f;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  grid-column: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+  grid-column: 1;
+  text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+  grid-column: 1;
+  text-align: right;
+}
+
+.timeline-year {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c93030;
+  align-self: center;
+}
+
+.timeline-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+  color: #d85b7f;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: #c93030;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #d85b7f;
+}
+
+/* ============================================================
+   ABOUT US PAGE - BOARD
+   ============================================================ */
+.board {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.board-member {
+  text-align: center;
+  background: #fff0f5;
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.board-photo {
+  width: 150px;
+  height: 150px;
+  background: #d85b7f;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+.board-member img {
+  border-radius: 100px;
+  margin: 0 auto;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.board-member h3 {
+  color: #c93030;
+  margin-bottom: 0.5rem;
+}
+
+.board-member p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   FOOD PANTRY PAGE - PAGE HEADER STATS
+   ============================================================ */
+.page-header .stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat .stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c93030;
+}
+
+.stat .stat-label {
+  color: #666;
+}
+
+/* ============================================================
+   FOOD PANTRY & THRIFT STORE - INFO SECTION
+   ============================================================ */
+.info-section {
+  padding: 4rem 2rem;
+  background: #fff0f5;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.info-card h3 {
+  color: #c93030;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-icon {
+  font-size: 2rem;
+}
+
+.hours-list {
+  list-style: none;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ffd6e4;
+}
+
+.hours-list li:last-child {
+  border-bottom: none;
+}
+
+.day {
+  font-weight: 600;
+  color: #333;
+}
+
+.time {
+  color: #666;
+}
+
+.closed {
+  color: #999;
+  font-style: italic;
+}
+
+.address {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.note {
+  background: #fff9e6;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   FOOD PANTRY PAGE - HOW IT WORKS
+   ============================================================ */
+.how-it-works {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step {
+  background: #fff0f5;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #c93030;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.step h3 {
+  color: #d85b7f;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   FOOD PANTRY PAGE - REQUIREMENTS
+   ============================================================ */
+.requirements {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.req-box {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  background: #fff9e6;
+  border-left: 5px solid #c93030;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.req-box h3 {
+  color: #c93030;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.req-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.req-list li {
+  padding: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.req-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #c93030;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* ============================================================
+   FOOD PANTRY PAGE - DONATE SECTION
+   ============================================================ */
+.donate-section {
+  padding: 4rem 2rem;
+  background: #fff0f5;
+}
+
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.donate-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.donate-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.donate-card h3 {
+  color: #c93030;
+  margin-bottom: 1rem;
+}
+
+.donate-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   FOOD PANTRY PAGE - CAROUSEL
+   ============================================================ */
+.carousel-section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 5px solid #c93030;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 33.33%;
+  min-width: 33.33%;
+  box-sizing: border-box;
+}
+
+.carousel-placeholder {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-placeholder-icon {
+  width: 100%;
+  aspect-ratio: 16 / 13;
+  overflow: hidden;
+}
+
+.carousel-placeholder-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.carousel-placeholder-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #d85b7f95;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.projects-carousel .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #d85b7f;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ffffff;
+  transition: background 0.3s ease;
+}
+
+.projects-carousel .carousel-arrow.prev {
+  left: 15px;
+}
+
+.projects-carousel .carousel-arrow.next {
+  right: 15px;
+}
+
+/* ============================================================
+   THRIFT STORE PAGE - MISSION BANNER
+   ============================================================ */
+.mission-banner {
+  background: #c93030;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.mission-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mission-banner p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   THRIFT STORE PAGE - THRIFT INFO SECTION
+   ============================================================ */
+.thrift-info-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #c93030;
+  font-weight: 600;
+}
+
+/* ============================================================
+   THRIFT STORE PAGE - IMPACT GRID
+   ============================================================ */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.impact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.impact-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.impact-card h3 {
+  color: #c93030;
+  margin-bottom: 1rem;
+}
+
+.impact-card p {
+  color: #666;
+}
+
+/* ============================================================
+   THRIFT STORE PAGE - DONATIONS
+   ============================================================ */
+.donations {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.donation-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accept-box,
+.no-accept-box {
+  background: #fff0f5;
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.no-accept-box {
+  background: #ffe6e6;
+  border-left: 5px solid #c93030;
+}
+
+.accept-box h3,
+.no-accept-box h3 {
+  color: #c93030;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.item-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.item-list li {
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.accept-box .item-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2d882d;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.no-accept-box .item-list li::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: #c93030;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.drop-off-locations {
+  background: linear-gradient(135deg, #ffe4e9 0%, #fff0f5 100%);
+  padding: 2.5rem;
+  border-radius: 15px;
+}
+
+.drop-off-locations h3 {
+  color: #c93030;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.location-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.location-box h4 {
+  color: #d85b7f;
+  margin-bottom: 0.5rem;
+}
+
+.location-box p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   THRIFT STORE PAGE - GALLERY
+   ============================================================ */
+.gallery {
+  padding: 4rem 2rem;
+  background: #fff0f5;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  aspect-ratio: 6/5;
+  background: #d85b7f;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* ============================================================
+   PARTNERS PAGE - THANK YOU / PARTNERS GRID
+   ============================================================ */
+.thank-you {
+  padding: 4rem 2rem;
+  background: white;
+  text-align: center;
+}
+
+.thank-you-text {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.partner-card {
+  background: #fff0f5;
+  padding: 2rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 220px;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(216, 91, 127, 0.2);
+}
+
+.partner-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.partner-logo {
+  max-width: 100%;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ============================================================
+   PARTNERS PAGE - BENEFITS
+   ============================================================ */
+.benefits {
+  padding: 4rem 2rem;
+  background: #fff0f5;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  background: #d85b7f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.benefit-card h3 {
+  color: #c93030;
+  margin-bottom: 1rem;
+}
+
+.benefit-card p {
+  color: #555;
+}
+
+/* ============================================================
+   PARTNERS PAGE - PARTNER FORM
+   ============================================================ */
+.partner-form-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.partner-form {
+  max-width: 700px;
+  margin: 2rem auto 0;
+  background: linear-gradient(135deg, #ffe4e9 0%, #fff0f5 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.partner-form h3 {
+  color: #c93030;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.partner-form > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ffd6e4;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #d85b7f;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.required {
+  color: #c93030;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: #c93030;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+  background: #a82828;
+  transform: translateY(-2px);
+}
+
+.form-note {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ============================================================
+   CONTACT PAGE - CONTACT SECTION
+   ============================================================ */
+.contact-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.contact-card {
+  background: #fff0f5;
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  background: #d85b7f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.contact-card h3 {
+  color: #c93030;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card p {
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.contact-card strong {
+  color: #333;
+}
+
+.contact-card a {
+  color: #c93030;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   CONTACT PAGE - LOCATIONS
+   ============================================================ */
+.locations {
+  padding: 4rem 2rem;
+  background: #fff0f5;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.location-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.location-card h3 {
+  color: #c93030;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.location-details {
+  margin-bottom: 1.5rem;
+}
+
+.location-details p {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.hours-grid .day {
+  font-weight: 600;
+}
+
+.hours-grid .time {
+  color: #666;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 400px;
+  background: #d85b7f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+.map-placeholder iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ============================================================
+   CONTACT PAGE - DONATE METHODS
+   ============================================================ */
+.contact-donate-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.donate-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.donate-method {
+  background: #fff0f5;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.donate-method h3 {
+  color: #c93030;
+  margin-bottom: 1rem;
+}
+
+.donate-method p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   RESPONSIVE - 1024px (TABLET)
+   ============================================================ */
+@media (max-width: 1024px) {
+  nav {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 0;
+  }
+
+  nav ul.active {
+    max-height: 500px;
+    padding: 1rem 0;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul a {
+    display: block;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #fff0f5;
+  }
+
+  nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  .donate-btn {
+    margin: 1rem 2rem;
+    display: block;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE - 768px (SMALL TABLET)
+   ============================================================ */
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Grids collapse to 1 column */
+  .location-grid,
+  .contact-grid,
+  .board-grid,
+  .donate-methods,
+  .benefits-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  /* About Us - Founder stacks */
+  .founder-content {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* About Us - Timeline stacks */
+  .timeline-items::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    padding-left: 60px;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-year {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-year {
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 30px;
+  }
+
+  /* Partners grid */
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Food pantry stats wrap */
+  .page-header .stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Maps */
+  .map-placeholder {
+    height: 300px;
+  }
+
+  /* News */
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE - 468px (MOBILE)
+   ============================================================ */
+@media (max-width: 468px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Grids - all single column */
+  .location-grid,
+  .contact-grid,
+  .board-grid,
+  .donate-methods,
+  .benefits-grid,
+  .steps,
+  .info-grid,
+  .donate-grid,
+  .gallery-grid,
+  .impact-grid,
+  .services-grid,
+  .impact-stats,
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Partners */
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Maps */
+  .map-placeholder {
+    height: 250px;
+  }
+
+  /* Timeline */
+  .timeline-items::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    padding-left: 45px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+  }
+
+  /* Carousel */
+  .carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  /* Footer centering */
+  footer {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .social-icon.facebook {
+    padding-left: 0;
+  }
+
+  .social-icon.camera {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  /* App box */
+  .app-box {
+    padding: 1.5rem;
+  }
+
+  /* Partner form */
+  .partner-form {
+    padding: 1.5rem;
+  }
+}
