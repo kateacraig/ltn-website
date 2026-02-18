@@ -2092,6 +2092,10 @@ footer {
     gap: 2rem;
   }
 
+  .impact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   /* Apply page */
   .apply-eligibility-inner {
     max-width: 100%;
@@ -2120,8 +2124,14 @@ footer {
   .board-grid,
   .donate-methods,
   .benefits-grid,
-  .steps {
+  .steps,
+  .info-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* About Us - Founder stacks */
@@ -2251,7 +2261,8 @@ footer {
   .impact-grid,
   .services-grid,
   .impact-stats,
-  .news-grid {
+  .news-grid,
+  .locations-grid {
     grid-template-columns: 1fr;
   }
 
